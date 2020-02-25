@@ -1,0 +1,103 @@
+.card-container {
+  display: grid;
+  width: 20%;
+  min-width: 200px;
+  height: 35vh;
+  min-height: 240px;
+  grid-template-rows: 2fr 5fr 2fr 1fr;
+  -webkit-box-shadow: 1px 0px 16px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 16px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+
+  .cc-card-header {
+    display: flex;
+
+    .cc-inner-header {
+      height: 80%;
+      width: 100%;
+      display: grid;
+      align-self: center;
+      flex-direction: column;
+      background: white;
+      grid-template-areas:
+        'icon title'
+        'icon 2ndTitle';
+      grid-template-rows: minmax(15px, auto) minmax(15px, auto);
+      grid-template-columns: 1fr 3fr;
+
+      img {
+        grid-area: icon;
+        height: inherit;
+        border-radius: 100%;
+        align-self: center;
+        justify-self: center;
+        border: 0.5px solid grey;
+        margin-left: 20%;
+        margin-right: 15%;
+      }
+
+      h4 {
+        margin: 0;
+        font-weight: 300;
+        align-self: end;
+        font-size: 1.2rem;
+      }
+
+      h6 {
+        margin: 0;
+        color: grey;
+        font-weight: 100;
+        align-self: start;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .cc-image {
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .cc-description {
+    width: 90%;
+    justify-self: center;
+    font-size: 0.7rem;
+    overflow: hidden;
+    color: grey;
+    margin-top: 3%;
+  }
+
+  .cc-actions {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    justify-self: center;
+
+    .cc-actions-left {
+      display: flex;
+
+      p {
+        margin: 0px;
+        width: max-content;
+        font-size: 0.7em;
+        align-self: center;
+      }
+
+      :nth-child(1) {
+        margin-right: 10%;
+      }
+    }
+
+    .cc-actions-right {
+      display: flex;
+      align-items: center;
+      width: 23%;
+      justify-content: space-between;
+    }
+  }
+}
