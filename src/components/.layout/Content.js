@@ -1,10 +1,15 @@
 import React from 'react'
 import Homepage from '../homepage/Homepage'
+import { Route } from 'react-router-dom'
 
 const Content = () => {
   return (
     <>
-      <Homepage />
+      <Route
+        exact
+        path='/'
+        render={routerProps => <Homepage {...routerProps} />}
+      />
     </>
   )
 }

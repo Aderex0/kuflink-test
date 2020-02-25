@@ -2,7 +2,7 @@ import React from 'react'
 import { render, cleanup, fireEvent } from '@testing-library/react'
 import CardComponent from '../components/card_component/CardComponent'
 
-describe('CardComponent />', () => {
+describe('<CardComponent />', () => {
   it('renders the card component', () => {
     const { queryByTestId } = render(<CardComponent />)
     expect(queryByTestId).toBeTruthy()
