@@ -1,5 +1,69 @@
+//Mixin
+
+@mixin mediaQuery($from) {
+  @media (min-width: $from) {
+    @content;
+  }
+}
+
+// Homepage
+
 .homepage-container {
+  padding-top: 9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 90vh;
-  background: green;
+  max-width: 1260px;
+  height: fit-content;
+
+  .profile-user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #0045ff, #01d2a3);
+    width: 100%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+
+    @include mediaQuery(1025px) {
+      margin-top: 5%;
+      width: 20%;
+      border-radius: 100%;
+    }
+
+    img {
+      margin-top: 10%;
+      margin-bottom: 10%;
+      width: 40%;
+      background-color: white;
+      border-radius: 100%;
+      border: 4px solid white;
+
+      @include mediaQuery(500px) {
+        width: 25%;
+      }
+
+      @include mediaQuery(1025px) {
+        margin: 5%;
+        width: 90%;
+      }
+    }
+  }
+
+  h2 {
+    letter-spacing: 3px;
+    font-size: 2rem;
+  }
+
+  .user-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include mediaQuery(1025px) {
+      flex-direction: row;
+    }
+  }
 }

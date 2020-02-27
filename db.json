@@ -1,42 +1,46 @@
 {
-  "users": [
-    {
-      "userId": 1,
-      "username": "Kuflink",
-      "userIcon": "http://moneybulldog.co.uk/wp-content/uploads/2019/03/kuflink_logo.jpg"
-    }
-  ],
-
   "posts": [
     {
-      "postId": 1,
+      "id": 1,
       "title": "Summer",
       "secondary_title": "Cornwall, UK",
-      "likes": 210,
       "shared": false,
+      "liked": false,
       "image": "https://www.westcountryresorts.co.uk/wp-content/uploads/2016/09/AdobeStock_48142968.jpeg",
       "description": "Summer season at cornwall",
-      "userId": 1
+      "user": {
+        "userId": 1,
+        "username": "Kuflink",
+        "userIcon": "http://moneybulldog.co.uk/wp-content/uploads/2019/03/kuflink_logo.jpg"
+      }
     },
     {
-      "postId": 2,
+      "id": 2,
       "title": "Winter",
       "secondary_title": "Wales",
-      "likes": 100,
-      "shared": true,
-      "image": "https://lh3.googleusercontent.com/proxy/NkifGU26PUIWc3jCfmYQ7McJWbiogNhWvZEm7uRujadFK-cYI82Be_X2vktwjV2x4yv5bmtl-K9H7B1f386z2xGIgvwXTJW6pBWWYzxUyi4IdlYxiHw_zUwuqvnh0VlcgtNR2210IlHOVK4aPw",
+      "shared": false,
+      "liked": false,
+      "image": "https://i1.wp.com/www.mudandroutes.com/wp-content/uploads/2015/11/RichardOutram_MG_3415.jpg?w=1000&ssl=1",
       "description": "Winter in the national park of snowdonia",
-      "userId": 1
+      "user": {
+        "userId": 1,
+        "username": "Kuflink",
+        "userIcon": "http://moneybulldog.co.uk/wp-content/uploads/2019/03/kuflink_logo.jpg"
+      }
     },
     {
-      "postId": 3,
+      "id": 3,
       "title": "Winter",
       "secondary_title": "",
-      "likes": 0,
       "shared": false,
+      "liked": false,
       "image": "https://cdn.weatherworksinc.com/blogs/winter-273403_640.jpg",
       "description": "Winter season somewhere in the unknown",
-      "userId": 1
+      "user": {
+        "userId": 1,
+        "username": "Kuflink",
+        "userIcon": "http://moneybulldog.co.uk/wp-content/uploads/2019/03/kuflink_logo.jpg"
+      }
     }
   ]
 }
