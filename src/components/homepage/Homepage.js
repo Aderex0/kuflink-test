@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import CardComponent from '../card_component/CardComponent'
 import './Homepage.scss'
-import API from '../../adapters/API'
+import useCardIndexAPI from '../../hooks/useCardIndexAPI'
 
 const Homepage = () => {
-  const [cardIndex, setCardIndex] = useState([])
-  const [userData, setUserData] = useState({
-    userIcon: '',
-    username: '',
-    userId: ''
-  })
-
-  useEffect(() => {
-    API.getCardIndex().then(
-      posts => (setCardIndex(posts), setUserData(posts[0].user))
-    )
-  }, [])
+  const { cardIndex, userData } = useCardIndexAPI()
 
   return (
     <div className='homepage-container'>

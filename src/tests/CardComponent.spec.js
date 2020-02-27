@@ -1,6 +1,8 @@
 import React from 'react'
 import { render, cleanup, fireEvent } from '@testing-library/react'
 import CardComponent from '../components/card_component/CardComponent'
+import nock from 'nock'
+import waitUntil from 'async-wait-until'
 
 afterAll(cleanup)
 
