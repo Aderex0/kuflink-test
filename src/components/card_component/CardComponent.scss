@@ -1,14 +1,49 @@
+//Mixin
+
+@mixin mediaQuery($from) {
+  @media (min-width: $from) {
+    @content;
+  }
+}
+
+@mixin mediaQueryHeight($from) {
+  @media (min-height: $from) {
+    @content;
+  }
+}
+
+//Card Component
+
 .card-container {
   display: grid;
-  width: 20%;
+  width: 85%;
   min-width: 200px;
-  height: 35vh;
+  height: 55vh;
   min-height: 240px;
   grid-template-rows: 2fr 5fr 2fr 1fr;
   -webkit-box-shadow: 1px 0px 16px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 0px 16px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
+  margin: 2% 0%;
+
+  @include mediaQuery(500px) {
+    width: 60%;
+    min-width: 400px;
+    max-height: 65vh;
+    min-height: 320px;
+  }
+
+  @include mediaQuery(1025px) {
+    width: 32%;
+    max-height: 70vh;
+    min-height: 450px;
+    margin: 1%;
+  }
+
+  @include mediaQueryHeight(700px) {
+    height: 55vh;
+  }
 
   .cc-card-header {
     display: flex;
@@ -41,7 +76,15 @@
         margin: 0;
         font-weight: 300;
         align-self: end;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+
+        @include mediaQuery(500px) {
+          font-size: 2rem;
+        }
+
+        @include mediaQuery(1025px) {
+          font-size: 2rem;
+        }
       }
 
       h6 {
@@ -50,6 +93,14 @@
         font-weight: 100;
         align-self: start;
         font-size: 0.75rem;
+
+        @include mediaQuery(500px) {
+          font-size: 1rem;
+        }
+
+        @include mediaQuery(1025px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -70,6 +121,14 @@
     overflow: hidden;
     color: grey;
     margin-top: 3%;
+
+    @include mediaQuery(500px) {
+      font-size: 1rem;
+    }
+
+    @include mediaQuery(1025px) {
+      font-size: 1.2rem;
+    }
   }
 
   .cc-actions {
@@ -84,8 +143,22 @@
       p {
         margin: 0px;
         width: max-content;
-        font-size: 0.7em;
+        font-size: 1em;
         align-self: center;
+        color: slateblue;
+        font-weight: 600;
+
+        @include mediaQuery(500px) {
+          font-size: 1.4rem;
+        }
+
+        @include mediaQuery(1025px) {
+          font-size: 1.3rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       :nth-child(1) {
@@ -96,8 +169,14 @@
     .cc-actions-right {
       display: flex;
       align-items: center;
-      width: 23%;
+      width: 16%;
       justify-content: space-between;
+
+      span {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

@@ -1,17 +1,18 @@
 import React from 'react'
 import Homepage from '../homepage/Homepage'
-import { Route } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 const Content = () => {
   return (
     <>
-      <Route
-        exact
-        path='/'
-        render={routerProps => <Homepage {...routerProps} />}
-      />
+      <Router>
+        <Route
+          exact
+          path='/'
+          render={routerProps => <Homepage {...routerProps} />}
+        />
+      </Router>
     </>
   )
 }
-
 export default Content

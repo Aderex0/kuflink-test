@@ -1,21 +1,50 @@
+// Mixins
+@mixin mediaQuery($from) {
+  @media (min-width: $from) {
+    @content;
+  }
+}
+
+// Header
+
 .header-container {
   display: flex;
+  position: fixed;
   height: 10vh;
-  background-image: linear-gradient(to right, #0045ff, #01d2a3);
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
+  min-height: 65px;
+
+  .inner-header {
+    display: flex;
+    max-width: 1260px;
+    width: 100%;
+    min-height: 65px;
+    height: 10vh;
+    justify-content: space-between;
+    align-self: center;
+  }
 
   .header-logo {
-    width: 70%;
+    width: max-content;
+    margin-left: 3%;
     display: flex;
     justify-content: center;
 
     a {
       align-self: center;
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     img {
       width: 170px;
+
+      @include mediaQuery(500px) {
+        width: 240px;
+      }
     }
   }
 
@@ -23,5 +52,13 @@
     display: flex;
     align-self: center;
     width: 20%;
+
+    @include mediaQuery(500px) {
+      width: 12%;
+    }
+
+    @include mediaQuery(1025px) {
+      width: 7%;
+    }
   }
 }
