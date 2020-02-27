@@ -5,15 +5,31 @@ Please CD into kuflink-test folder.
 The example is done with JSON server to mimic an API.
 https://github.com/typicode/json-server
 
-To run JSON server run: yarn server
+run
+
+```
+yarn install
+```
+
+to download all dependancies.
+
+To run JSON server run:
+
+```
+yarn server
+```
 
 You might need to install the JSON server first by running
 
-npm install -g json-server
+```
+yarn install -g json-server
+```
 
 Then run:
 
+```
 yarn start
+```
 
 to view the example.
 
@@ -22,10 +38,14 @@ Testing is done with cypress for end to end testing and reat-testing-library for
 
 run
 
+```
 yarn e2e
+```
 
 or
 
+```
 yarn test
+```
 
 to run the tests
